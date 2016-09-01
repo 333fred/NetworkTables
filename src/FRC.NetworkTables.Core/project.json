@@ -77,5 +77,8 @@
     "Debug": {
       "define": [ "DEBUG" ]
     }
+  },
+  "dependencies": {
+    "NativeLibraryUtilities": "1.0.0-beta-0010"
   }
 }

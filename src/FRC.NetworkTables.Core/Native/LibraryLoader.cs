@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using NativeLibraryUtilities;
 
 namespace NetworkTables.Core.Native
 {
+    /*
     internal interface ILibraryLoader
     {
         IntPtr LoadLibrary(string filename);
@@ -181,6 +183,7 @@ namespace NetworkTables.Core.Native
         [DllImport("dl")]
         private static extern int dlclose(IntPtr handle);
     }
+    */
 
     [ExcludeFromCodeCoverage]
     internal class RoboRioLibraryLoader : ILibraryLoader
