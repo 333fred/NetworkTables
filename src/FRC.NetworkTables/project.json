@@ -40,7 +40,8 @@
         "../Shared/Exceptions/*.cs"
       ]
     },
-    "xmlDoc": true
+    "xmlDoc": true,
+    "allowUnsafe": true
 
   },
   "frameworks": {

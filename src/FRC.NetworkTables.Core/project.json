@@ -50,7 +50,8 @@
       ]
     },
     "define": [ "CORE" ],
-    "xmlDoc": true
+    "xmlDoc": true,
+    "allowUnsafe": true
   },
   "frameworks": {
     "net451": {},
