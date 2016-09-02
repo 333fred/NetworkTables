@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup />
+  <PropertyGroup>
+    <Description>A Managed version of the NetworkTables3 Protocol.</Description>
+    <Copyright>Copyright 2016 RobotDotNet</Copyright>
+    <AssemblyTitle>FRC NetworkTables</AssemblyTitle>
+    <VersionPrefix>3.0.0-beta</VersionPrefix>
+    <OutputPath>bin/$(Configuration)/netstandard1.3</OutputPath>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.3</TargetFrameworkVersion>
+    <DefineConstants>NETSTANDARD1_3</DefineConstants>
+    <AssemblyName>FRC.NetworkTables</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="**\*.cs" Exclude="$(GlobalExclude);Output\**\*;Exceptions\**\*;Tables\**\*;Wire\**\*;bin\**;obj\**;**\*.xproj;packages\**" />
+    <Compile Include="..\Shared\*.cs;..\Shared\Tables\*.cs;..\Shared\Wire\*.cs;..\Shared\Exceptions\*.cs" Exclude="Output\**\*;Exceptions\**\*;Tables\**\*;Wire\**\*;bin\**;obj\**;**\*.xproj;packages\**" />
+    <EmbeddedResource Include="**\*.resx" Exclude="$(GlobalExclude);bin\**;obj\**;**\*.xproj;packages\**" />
+    <EmbeddedResource Include="compiler\resources\**\*" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>RELEASE;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release'  and '$(TargetFrameworkIdentifier),Version=$(TargetFrameworkVersion)' == '.NETStandard,Version=v1.3' ">
+    <DefineConstants>RELEASE;TRACE;NETSTANDARD1_3</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

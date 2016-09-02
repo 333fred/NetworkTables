@@ -13,14 +13,9 @@
     "authors": [
       "RobotDotNet"
     ],
-    "id": "FRC.NetworkTables",
+    "id":  "FRC.NetworkTables",
     "title": "FRC NetworkTables",
-    "tags": [
-      "WPILib",
-      "FRC",
-      "FIRST",
-      "RoboRio"
-    ],
+    "tags": [ "WPILib", "FRC", "FIRST", "RoboRio" ],
     "requireLicenseAcceptance": false,
     "projectUrl": "https://github.com/robotdotnet/NetworkTables",
     "summary": "A Managed version of the NetworkTables3 Protocol.",
@@ -46,6 +41,7 @@
       ]
     },
     "xmlDoc": true
+
   },
   "frameworks": {
     "netstandard1.3": {
@@ -72,12 +68,7 @@
   },
   "configurations": {
     "Debug": {
-      "define": [
-        "DEBUG"
-      ]
+      "define": [ "DEBUG" ]
     }
-  },
-  "dependencies": {
-    "Microsoft.NETCore.Sdk": "1.0.0-alpha-20160831-1"
   }
 }
